@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terapia Holística · Bienestar Integral</title>
+  <title>Amor y Sanación · Bienestar Integral</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', sans-serif;
-      color: #1e2a1e;
-      background: #fafdf8;
+      font-family: 'DM Sans', sans-serif;
+      color: #3a3a3a;
+      background: #f9fdf0;
       line-height: 1.6;
     }
     a { text-decoration: none; color: inherit; }
@@ -23,9 +24,9 @@
     /* ─── HEADER ─── */
     header {
       position: fixed; top: 0; left: 0; width: 100%;
-      background: rgba(250, 253, 248, 0.92);
+      background: rgba(249, 253, 240, 0.92);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(46, 94, 64, 0.08);
+      border-bottom: 1px solid rgba(182, 198, 153, 0.2);
       z-index: 100;
     }
     header .container {
@@ -34,89 +35,89 @@
     }
     .logo {
       font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       font-weight: 600;
-      color: #2e5e40;
+      color: #b6c699;
       letter-spacing: -0.3px;
     }
-    .logo span { color: #6f9e7a; }
+    .logo span { color: #e0ba41; font-weight: 500; }
     nav a {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 500;
-      color: #3a4f3a;
-      margin-left: 32px;
+      color: #5a5a5a;
+      margin-left: 28px;
       transition: color .2s;
     }
-    nav a:hover { color: #2e5e40; }
-    .whatsapp-float {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: #25D366; color: #fff; padding: 8px 18px;
-      border-radius: 50px; font-size: 0.85rem; font-weight: 600;
+    nav a:hover { color: #b6c699; }
+    .nav-ig {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: #b6c699; color: #fff; padding: 7px 16px;
+      border-radius: 50px; font-size: 0.82rem; font-weight: 600;
       transition: background .2s;
     }
-    .whatsapp-float:hover { background: #1ebe5d; }
+    .nav-ig:hover { background: #a3b88a; }
 
     /* ─── HERO ─── */
     .hero {
       min-height: 100vh;
       display: flex; align-items: center;
       padding: 100px 0 80px;
-      background: linear-gradient(135deg, #f0f9f0 0%, #e4f0e4 50%, #fafdf8 100%);
+      background: linear-gradient(135deg, #f9fdf0 0%, #f9f3ef 50%, #f9fdf0 100%);
     }
     .hero .container { display: flex; align-items: center; gap: 60px; }
     .hero-content { flex: 1; }
     .hero-content .badge {
       display: inline-block;
-      background: rgba(46, 94, 64, 0.1);
-      color: #2e5e40;
-      font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+      background: rgba(182, 198, 153, 0.15);
+      color: #b6c699;
+      font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
       letter-spacing: 1.5px;
       padding: 6px 16px; border-radius: 50px;
       margin-bottom: 20px;
     }
     .hero-content h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
+      font-size: 3rem;
       font-weight: 600;
       line-height: 1.15;
-      color: #1a2e1a;
+      color: #2d2d2d;
       margin-bottom: 18px;
     }
     .hero-content h1 em {
       font-style: italic;
-      color: #2e5e40;
+      color: #b6c699;
     }
     .hero-content p {
-      font-size: 1.1rem;
-      color: #4a5f4a;
+      font-size: 1.05rem;
+      color: #5a5a5a;
       max-width: 480px;
       margin-bottom: 32px;
     }
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
     .btn-primary {
       display: inline-block;
-      background: #2e5e40;
+      background: #b6c699;
       color: #fff; padding: 14px 34px;
       border-radius: 50px;
-      font-weight: 600; font-size: 0.95rem;
+      font-weight: 600; font-size: 0.93rem;
       transition: background .2s, transform .2s;
     }
-    .btn-primary:hover { background: #234a32; transform: translateY(-2px); }
+    .btn-primary:hover { background: #a3b88a; transform: translateY(-2px); }
     .btn-secondary {
       display: inline-flex; align-items: center; gap: 8px;
       background: transparent;
-      color: #2e5e40; padding: 14px 34px;
+      color: #b6c699; padding: 14px 34px;
       border-radius: 50px;
-      font-weight: 600; font-size: 0.95rem;
-      border: 2px solid rgba(46, 94, 64, 0.25);
+      font-weight: 600; font-size: 0.93rem;
+      border: 2px solid rgba(182, 198, 153, 0.3);
       transition: background .2s, border-color .2s;
     }
-    .btn-secondary:hover { background: rgba(46, 94, 64, 0.06); border-color: #2e5e40; }
+    .btn-secondary:hover { background: rgba(182, 198, 153, 0.06); border-color: #b6c699; }
     .hero-visual { flex: 1; display: flex; justify-content: center; }
     .hero-symbol {
-      width: 360px; height: 360px;
+      width: 340px; height: 340px;
       border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #d4e8d4, #b8d4b8);
+      background: radial-gradient(circle at 30% 30%, #eacfc8, #d9d3e2);
       display: flex; align-items: center; justify-content: center;
       position: relative;
     }
@@ -124,15 +125,14 @@
       content: '';
       position: absolute; inset: -12px;
       border-radius: 50%;
-      border: 2px dashed rgba(46, 94, 64, 0.15);
+      border: 2px dashed rgba(182, 198, 153, 0.25);
       animation: spin 40s linear infinite;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
     .hero-symbol span {
-      font-size: 5rem;
-      font-family: 'Playfair Display', serif;
-      color: #2e5e40;
-      opacity: 0.6;
+      font-size: 4.5rem;
+      color: #fff;
+      opacity: 0.7;
     }
 
     /* ─── SERVICES ─── */
@@ -141,18 +141,19 @@
       background: #fff;
     }
     .section-label {
-      font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 2px; color: #6f9e7a;
+      font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 2px; color: #b6c699;
       margin-bottom: 8px;
     }
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
-      color: #1a2e1a;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #2d2d2d;
       margin-bottom: 16px;
     }
     .section-desc {
-      color: #4a5f4a;
+      color: #5a5a5a;
       max-width: 540px;
       margin-bottom: 50px;
     }
@@ -162,42 +163,43 @@
       gap: 28px;
     }
     .service-card {
-      background: #fafdf8;
+      background: #f9fdf0;
       padding: 32px 24px;
       border-radius: 20px;
-      border: 1px solid rgba(46, 94, 64, 0.06);
+      border: 1px solid rgba(182, 198, 153, 0.1);
       transition: transform .25s, box-shadow .25s;
     }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(46, 94, 64, 0.06); }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(182, 198, 153, 0.08); }
     .service-icon {
       width: 48px; height: 48px;
-      background: rgba(46, 94, 64, 0.08);
+      background: rgba(182, 198, 153, 0.12);
       border-radius: 14px;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.3rem;
       margin-bottom: 18px;
     }
     .service-card h3 {
-      font-size: 1.1rem; font-weight: 600;
-      color: #1a2e1a; margin-bottom: 8px;
+      font-size: 1.08rem; font-weight: 600;
+      color: #2d2d2d; margin-bottom: 8px;
     }
     .service-card p {
-      font-size: 0.9rem; color: #4a5f4a;
+      font-size: 0.88rem; color: #5a5a5a;
     }
+    .service-card .accent { color: #e0ba41; }
 
     /* ─── ABOUT ─── */
     .about {
       padding: 100px 0;
-      background: #f0f9f0;
+      background: #f9f3ef;
     }
     .about .container { display: flex; align-items: center; gap: 60px; }
     .about-content { flex: 1; }
     .about-visual { flex: 1; display: flex; justify-content: center; }
     .about-quote {
       font-family: 'Playfair Display', serif;
-      font-size: 1.3rem; font-style: italic;
-      color: #2e5e40;
-      border-left: 3px solid #2e5e40;
+      font-size: 1.25rem; font-style: italic;
+      color: #b6c699;
+      border-left: 3px solid #e0ba41;
       padding-left: 24px;
       margin: 24px 0;
     }
@@ -205,78 +207,77 @@
     /* ─── CONTACT ─── */
     .contact {
       padding: 100px 0;
-      background: #fff;
+      background: #f9fdf0;
     }
     .contact-layout { display: flex; gap: 50px; align-items: flex-start; }
     .contact-info { flex: 1; }
-    .contact-info p { margin-bottom: 10px; color: #4a5f4a; }
+    .contact-info p { margin-bottom: 10px; color: #5a5a5a; }
     .contact-info .info-item {
       display: flex; align-items: center; gap: 10px;
       margin-bottom: 12px;
-      font-size: 0.95rem;
+      font-size: 0.93rem;
     }
     .contact-form { flex: 1; }
     .form-group { margin-bottom: 18px; }
     .form-group label {
       display: block;
-      font-size: 0.85rem; font-weight: 500;
-      color: #1a2e1a; margin-bottom: 5px;
+      font-size: 0.83rem; font-weight: 500;
+      color: #2d2d2d; margin-bottom: 5px;
     }
     .form-group input,
     .form-group textarea {
       width: 100%;
       padding: 12px 16px;
-      border: 1.5px solid rgba(46, 94, 64, 0.15);
+      border: 1.5px solid rgba(182, 198, 153, 0.2);
       border-radius: 12px;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      background: #fafdf8;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.93rem;
+      background: #fff;
       transition: border-color .2s;
     }
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: #2e5e40;
+      border-color: #b6c699;
     }
     .form-group textarea { resize: vertical; min-height: 110px; }
     .btn-submit {
-      background: #2e5e40; color: #fff;
+      background: #b6c699; color: #fff;
       border: none; padding: 14px 34px;
-      border-radius: 50px; font-weight: 600; font-size: 0.95rem;
+      border-radius: 50px; font-weight: 600; font-size: 0.93rem;
       cursor: pointer;
       transition: background .2s, transform .2s;
     }
-    .btn-submit:hover { background: #234a32; transform: translateY(-2px); }
+    .btn-submit:hover { background: #a3b88a; transform: translateY(-2px); }
 
     /* ─── FOOTER ─── */
     footer {
-      background: #1a2e1a;
-      color: rgba(255,255,255,0.7);
+      background: #2d2d2d;
+      color: rgba(255,255,255,0.6);
       padding: 40px 0;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
-    footer strong { color: #fff; }
+    footer strong { color: #b6c699; font-weight: 500; }
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 800px) {
       .hero .container { flex-direction: column; text-align: center; }
       .hero-content p { margin-left: auto; margin-right: auto; }
-      .hero-content h1 { font-size: 2.4rem; }
+      .hero-content h1 { font-size: 2.2rem; }
       .hero-actions { justify-content: center; }
       .hero-symbol { width: 220px; height: 220px; }
       .hero-symbol span { font-size: 3rem; }
       .about .container { flex-direction: column; text-align: center; }
       .about-quote { text-align: left; }
       .contact-layout { flex-direction: column; }
-      nav a { margin-left: 16px; font-size: 0.8rem; }
-      .whatsapp-float span { display: none; }
+      nav a { margin-left: 14px; font-size: 0.78rem; }
     }
     @media (max-width: 500px) {
       header .container { height: 60px; }
-      .logo { font-size: 1.1rem; }
-      nav a { margin-left: 12px; }
-      .hero-content h1 { font-size: 1.9rem; }
+      .logo { font-size: 1rem; }
+      nav a { margin-left: 10px; }
+      .hero-content h1 { font-size: 1.8rem; }
     }
   </style>
 </head>
@@ -285,14 +286,14 @@
   <!-- ═══ HEADER ═══ -->
   <header>
     <div class="container">
-      <a href="#" class="logo">Armonía<span>Holística</span></a>
+      <a href="#" class="logo">Amor y <span>Sanación</span></a>
       <nav>
         <a href="#servicios">Servicios</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#contacto">Contacto</a>
-        <a href="https://wa.me/5491123456789" target="_blank" class="whatsapp-float">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          <span>WhatsApp</span>
+        <a href="https://instagram.com/_amor_y_sanacion" target="_blank" class="nav-ig">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram
         </a>
       </nav>
     </div>
@@ -303,8 +304,8 @@
     <div class="container">
       <div class="hero-content">
         <span class="badge">Bienestar Integral</span>
-        <h1>Encuentra tu <em>equilibrio</em>, transforma tu vida</h1>
-        <p>Terapias holísticas para armonizar cuerpo, mente y espíritu. Reiki, masajes, yoga, meditación y más en un solo lugar.</p>
+        <h1>Un espacio para <em>reconectar</em> con tu bienestar</h1>
+        <p>Masajes terapéuticos, terapias holísticas y acompañamiento emocional en un espacio cálido y seguro.</p>
         <div class="hero-actions">
           <a href="#contacto" class="btn-primary">Agenda tu sesión</a>
           <a href="#servicios" class="btn-secondary">Ver servicios</a>
@@ -312,7 +313,7 @@
       </div>
       <div class="hero-visual">
         <div class="hero-symbol">
-          <span>☿</span>
+          <span>🦋</span>
         </div>
       </div>
     </div>
@@ -323,37 +324,37 @@
     <div class="container">
       <span class="section-label">Servicios</span>
       <h2 class="section-title">Terapias para tu bienestar</h2>
-      <p class="section-desc">Cada sesión es única y se adapta a tus necesidades. Trabajamos con herramientas ancestrales y enfoque moderno.</p>
+      <p class="section-desc">Cada sesión es única y se adapta a tus necesidades. Te acompañamos en tu proceso de sanación con un enfoque profundamente humano.</p>
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🕉️</div>
-          <h3>Reiki</h3>
-          <p>Canalización de energía universal para restaurar el equilibrio físico, emocional y espiritual.</p>
-        </div>
         <div class="service-card">
           <div class="service-icon">💆</div>
           <h3>Masajes Terapéuticos</h3>
-          <p>Descontracturantes, drenaje linfático y masajes con piedras calientes para liberar tensiones.</p>
+          <p>Sesiones individuales y paquetes de masajes relajantes y descontracturantes, diseñados para liberar tensiones y restaurar el equilibrio.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">🧘</div>
-          <h3>Yoga & Meditación</h3>
-          <p>Clases guiadas de Hatha Yoga, Vinyasa y meditación mindfulness para conectar con tu interior.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🌌</div>
-          <h3>Constelaciones Familiares</h3>
-          <p>Terapia sistémica que revela dinámicas ocultas y restaura el orden en tus relaciones.</p>
+          <div class="service-icon">✨</div>
+          <h3>Terapias Holísticas</h3>
+          <p>Sanación energética y emocional a través de técnicas que conectan cuerpo, mente y espíritu.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">🌿</div>
-          <h3>Aromaterapia</h3>
-          <p>Uso de aceites esenciales puros para equilibrar las emociones y potenciar la vitalidad.</p>
+          <h3>Experiencias Sensoriales</h3>
+          <p>Aromaterapia, musicoterapia ambiental y ambientación consciente para una experiencia de bienestar profunda.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">🔮</div>
-          <h3>Lectura de Registros</h3>
-          <p>Acceso a la sabiduría de tu alma a través de la lectura de Registros Akáshicos.</p>
+          <div class="service-icon">🧠</div>
+          <h3>Contenido de Bienestar</h3>
+          <p>Guías de mindfulness, meditación y crecimiento personal para llevar el bienestar a tu día a día.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">❤️</div>
+          <h3>Acompañamiento Emocional</h3>
+          <p>Un espacio de escucha amorosa y respeto por tu proceso único de sanación y transformación.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🦋</div>
+          <h3>Experiencias Grupales</h3>
+          <p>Talleres de autocuidado, retiros de bienestar y espacios de conexión colectiva.</p>
         </div>
       </div>
     </div>
@@ -365,13 +366,13 @@
       <div class="about-content">
         <span class="section-label">Sobre nosotros</span>
         <h2 class="section-title">Tu espacio de sanación</h2>
-        <p>Creamos un refugio donde puedas soltar, respirar y reconectar con tu esencia. Cada terapia está diseñada para acompañarte en tu proceso de transformación personal.</p>
-        <div class="about-quote">"La sanación no es un destino, es el camino de vuelta a tu centro."</div>
-        <p style="margin-top: 16px;">Trabajamos con respeto, empatía y confidencialidad. Sesiones presenciales y a distancia.</p>
+        <p>Creemos que el bienestar es un acto de amor propio. Nacimos con la intención de crear un espacio cálido y seguro donde cada persona pueda reencontrarse con su equilibrio físico, emocional y energético.</p>
+        <div class="about-quote">"El bienestar no es un lujo ocasional, es un acto de amor propio y un hábito de vida."</div>
+        <p style="margin-top: 16px;">Te acompañamos con empatía, respeto y confidencialidad en cada paso de tu camino hacia una vida más consciente y plena.</p>
       </div>
       <div class="about-visual">
-        <div style="width:280px;height:280px;border-radius:50%;background:linear-gradient(135deg,#d4e8d4,#b8d4b8);display:flex;align-items:center;justify-content:center;">
-          <span style="font-size:5rem;font-family:'Playfair Display',serif;color:#2e5e40;opacity:0.5;">☯</span>
+        <div style="width:260px;height:260px;border-radius:50%;background:linear-gradient(135deg,#eacfc8,#d9d3e2);display:flex;align-items:center;justify-content:center;">
+          <span style="font-size:4.5rem;opacity:0.6;">🦋</span>
         </div>
       </div>
     </div>
@@ -384,13 +385,13 @@
       <h2 class="section-title">Demos el primer paso</h2>
       <div class="contact-layout">
         <div class="contact-info">
-          <p style="margin-bottom: 24px;">Escribinos y te responderemos a la brevedad. También podés contactarnos directamente por WhatsApp.</p>
-          <div class="info-item">📍 Buenos Aires, Argentina</div>
-          <div class="info-item">📧 hola@armoniaholistica.com</div>
-          <div class="info-item">📱 +54 9 11 2345-6789</div>
-          <a href="https://wa.me/5491123456789" target="_blank" class="btn-primary" style="margin-top: 12px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Escribinos a WhatsApp
+          <p style="margin-bottom: 24px;" id="contactText">Escribinos y te responderemos a la brevedad. También podés contactarnos por Instagram.</p>
+          <div class="info-item">📍 San Andrés, Gral. San Martín, Buenos Aires</div>
+          <div class="info-item">📧 hola@amorysanacion.com</div>
+          <div class="info-item">📱 <span id="phoneDisplay">Próximamente</span></div>
+          <a href="https://instagram.com/_amor_y_sanacion" target="_blank" class="btn-primary" style="margin-top: 12px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Seguinos en Instagram
           </a>
         </div>
         <form class="contact-form" id="contactForm">
@@ -407,7 +408,7 @@
             <textarea id="mensaje" placeholder="Contanos en qué te gustaría profundizar..." required></textarea>
           </div>
           <button type="submit" class="btn-submit">Enviar mensaje</button>
-          <p id="formFeedback" style="margin-top:12px;font-size:0.85rem;color:#6f9e7a;display:none;">✓ Mensaje enviado con éxito. Te contactaremos pronto.</p>
+          <p id="formFeedback" style="margin-top:12px;font-size:0.83rem;color:#b6c699;display:none;">✓ Mensaje enviado con éxito. Te contactaremos pronto.</p>
         </form>
       </div>
     </div>
@@ -416,7 +417,7 @@
   <!-- ═══ FOOTER ═══ -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 <strong>Armonía Holística</strong> · Todos los derechos reservados</p>
+      <p>&copy; 2026 <strong>Amor y Sanación</strong> · Todos los derechos reservados</p>
     </div>
   </footer>
 
