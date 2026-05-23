@@ -3,430 +3,553 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amor y Sanación — Bienestar integral en San Andrés, Buenos Aires. Masajes terapéuticos, terapias holísticas y acompañamiento emocional.">
   <title>Amor y Sanación · Bienestar Integral</title>
+
+  <!-- Bootstrap 5.3.8 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      color: #3a3a3a;
-      background: #f9fdf0;
-      line-height: 1.6;
-    }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
-
-    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
-
-    /* ─── HEADER ─── */
-    header {
-      position: fixed; top: 0; left: 0; width: 100%;
-      background: rgba(249, 253, 240, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(182, 198, 153, 0.2);
-      z-index: 100;
-    }
-    header .container {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 68px;
-    }
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: #b6c699;
-      letter-spacing: -0.3px;
-    }
-    .logo span { color: #e0ba41; font-weight: 500; }
-    nav a {
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: #5a5a5a;
-      margin-left: 28px;
-      transition: color .2s;
-    }
-    nav a:hover { color: #b6c699; }
-    .nav-ig {
-      display: inline-flex; align-items: center; gap: 5px;
-      background: #b6c699; color: #fff; padding: 7px 16px;
-      border-radius: 50px; font-size: 0.82rem; font-weight: 600;
-      transition: background .2s;
-    }
-    .nav-ig:hover { background: #a3b88a; }
-
-    /* ─── HERO ─── */
-    .hero {
-      min-height: 100vh;
-      display: flex; align-items: center;
-      padding: 100px 0 80px;
-      background: linear-gradient(135deg, #f9fdf0 0%, #f9f3ef 50%, #f9fdf0 100%);
-    }
-    .hero .container { display: flex; align-items: center; gap: 60px; }
-    .hero-content { flex: 1; }
-    .hero-content .badge {
-      display: inline-block;
-      background: rgba(182, 198, 153, 0.15);
-      color: #b6c699;
-      font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 1.5px;
-      padding: 6px 16px; border-radius: 50px;
-      margin-bottom: 20px;
-    }
-    .hero-content h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      font-weight: 600;
-      line-height: 1.15;
-      color: #2d2d2d;
-      margin-bottom: 18px;
-    }
-    .hero-content h1 em {
-      font-style: italic;
-      color: #b6c699;
-    }
-    .hero-content p {
-      font-size: 1.05rem;
-      color: #5a5a5a;
-      max-width: 480px;
-      margin-bottom: 32px;
-    }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-primary {
-      display: inline-block;
-      background: #b6c699;
-      color: #fff; padding: 14px 34px;
-      border-radius: 50px;
-      font-weight: 600; font-size: 0.93rem;
-      transition: background .2s, transform .2s;
-    }
-    .btn-primary:hover { background: #a3b88a; transform: translateY(-2px); }
-    .btn-secondary {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: transparent;
-      color: #b6c699; padding: 14px 34px;
-      border-radius: 50px;
-      font-weight: 600; font-size: 0.93rem;
-      border: 2px solid rgba(182, 198, 153, 0.3);
-      transition: background .2s, border-color .2s;
-    }
-    .btn-secondary:hover { background: rgba(182, 198, 153, 0.06); border-color: #b6c699; }
-    .hero-visual { flex: 1; display: flex; justify-content: center; }
-    .hero-symbol {
-      width: 340px; height: 340px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #eacfc8, #d9d3e2);
-      display: flex; align-items: center; justify-content: center;
-      position: relative;
-    }
-    .hero-symbol::after {
-      content: '';
-      position: absolute; inset: -12px;
-      border-radius: 50%;
-      border: 2px dashed rgba(182, 198, 153, 0.25);
-      animation: spin 40s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .hero-symbol span {
-      font-size: 4.5rem;
-      color: #fff;
-      opacity: 0.7;
-    }
-
-    /* ─── SERVICES ─── */
-    .services {
-      padding: 100px 0;
-      background: #fff;
-    }
-    .section-label {
-      font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 2px; color: #b6c699;
-      margin-bottom: 8px;
-    }
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      font-weight: 600;
-      color: #2d2d2d;
-      margin-bottom: 16px;
-    }
-    .section-desc {
-      color: #5a5a5a;
-      max-width: 540px;
-      margin-bottom: 50px;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 28px;
-    }
-    .service-card {
-      background: #f9fdf0;
-      padding: 32px 24px;
-      border-radius: 20px;
-      border: 1px solid rgba(182, 198, 153, 0.1);
-      transition: transform .25s, box-shadow .25s;
-    }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(182, 198, 153, 0.08); }
-    .service-icon {
-      width: 48px; height: 48px;
-      background: rgba(182, 198, 153, 0.12);
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.3rem;
-      margin-bottom: 18px;
-    }
-    .service-card h3 {
-      font-size: 1.08rem; font-weight: 600;
-      color: #2d2d2d; margin-bottom: 8px;
-    }
-    .service-card p {
-      font-size: 0.88rem; color: #5a5a5a;
-    }
-    .service-card .accent { color: #e0ba41; }
-
-    /* ─── ABOUT ─── */
-    .about {
-      padding: 100px 0;
-      background: #f9f3ef;
-    }
-    .about .container { display: flex; align-items: center; gap: 60px; }
-    .about-content { flex: 1; }
-    .about-visual { flex: 1; display: flex; justify-content: center; }
-    .about-quote {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem; font-style: italic;
-      color: #b6c699;
-      border-left: 3px solid #e0ba41;
-      padding-left: 24px;
-      margin: 24px 0;
-    }
-
-    /* ─── CONTACT ─── */
-    .contact {
-      padding: 100px 0;
-      background: #f9fdf0;
-    }
-    .contact-layout { display: flex; gap: 50px; align-items: flex-start; }
-    .contact-info { flex: 1; }
-    .contact-info p { margin-bottom: 10px; color: #5a5a5a; }
-    .contact-info .info-item {
-      display: flex; align-items: center; gap: 10px;
-      margin-bottom: 12px;
-      font-size: 0.93rem;
-    }
-    .contact-form { flex: 1; }
-    .form-group { margin-bottom: 18px; }
-    .form-group label {
-      display: block;
-      font-size: 0.83rem; font-weight: 500;
-      color: #2d2d2d; margin-bottom: 5px;
-    }
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1.5px solid rgba(182, 198, 153, 0.2);
-      border-radius: 12px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.93rem;
-      background: #fff;
-      transition: border-color .2s;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: #b6c699;
-    }
-    .form-group textarea { resize: vertical; min-height: 110px; }
-    .btn-submit {
-      background: #b6c699; color: #fff;
-      border: none; padding: 14px 34px;
-      border-radius: 50px; font-weight: 600; font-size: 0.93rem;
-      cursor: pointer;
-      transition: background .2s, transform .2s;
-    }
-    .btn-submit:hover { background: #a3b88a; transform: translateY(-2px); }
-
-    /* ─── FOOTER ─── */
-    footer {
-      background: #2d2d2d;
-      color: rgba(255,255,255,0.6);
-      padding: 40px 0;
-      text-align: center;
-      font-size: 0.88rem;
-    }
-    footer strong { color: #b6c699; font-weight: 500; }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 800px) {
-      .hero .container { flex-direction: column; text-align: center; }
-      .hero-content p { margin-left: auto; margin-right: auto; }
-      .hero-content h1 { font-size: 2.2rem; }
-      .hero-actions { justify-content: center; }
-      .hero-symbol { width: 220px; height: 220px; }
-      .hero-symbol span { font-size: 3rem; }
-      .about .container { flex-direction: column; text-align: center; }
-      .about-quote { text-align: left; }
-      .contact-layout { flex-direction: column; }
-      nav a { margin-left: 14px; font-size: 0.78rem; }
-    }
-    @media (max-width: 500px) {
-      header .container { height: 60px; }
-      .logo { font-size: 1rem; }
-      nav a { margin-left: 10px; }
-      .hero-content h1 { font-size: 1.8rem; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-  <!-- ═══ HEADER ═══ -->
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/" id="waBtn" aria-label="Contactar por WhatsApp" title="WhatsApp">
+    <i class="bi bi-whatsapp fs-4" aria-hidden="true"></i>
+  </a>
+
+  <!-- ══════════════════════════════════
+       HEADER
+  ══════════════════════════════════ -->
   <header>
-    <div class="container">
-      <a href="#" class="logo">Amor y <span>Sanación</span></a>
-      <nav>
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-        <a href="https://instagram.com/_amor_y_sanacion" target="_blank" class="nav-ig">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          Instagram
-        </a>
-      </nav>
-    </div>
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top py-0"
+         aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand py-3" href="index.html">Amor y <em>Sanación</em></a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasMenu"
+                aria-controls="offcanvasMenu"
+                aria-expanded="false"
+                aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="desktopNav">
+          <ul class="navbar-nav align-items-center gap-1 py-2">
+            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="secciones/nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            <li class="nav-item ms-2">
+              <a class="btn-nav-ig"
+                 href="https://instagram.com/_amor_y_sanacion"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Seguinos en Instagram">
+                <i class="bi bi-instagram" aria-hidden="true"></i> Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <!-- ═══ HERO ═══ -->
-  <section class="hero" id="inicio">
-    <div class="container">
-      <div class="hero-content">
-        <span class="badge">Bienestar Integral</span>
-        <h1>Un espacio para <em>reconectar</em> con tu bienestar</h1>
-        <p>Masajes terapéuticos, terapias holísticas y acompañamiento emocional en un espacio cálido y seguro.</p>
-        <div class="hero-actions">
-          <a href="#contacto" class="btn-primary">Agenda tu sesión</a>
-          <a href="#servicios" class="btn-secondary">Ver servicios</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-symbol">
-          <span>🦋</span>
-        </div>
+  <!-- Offcanvas menú mobile -->
+  <div class="offcanvas offcanvas-start" tabindex="-1"
+       id="offcanvasMenu" aria-labelledby="offcanvasLabel">
+    <div class="offcanvas-header">
+      <span class="navbar-brand m-0" id="offcanvasLabel">Amor y <em>Sanación</em></span>
+      <button type="button" class="btn-close"
+              data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-center gap-1">
+      <ul class="navbar-nav gap-1 mb-4">
+        <li class="nav-item">
+          <a class="nav-link" href="#servicios" data-bs-dismiss="offcanvas">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="secciones/nosotros.html" data-bs-dismiss="offcanvas">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#testimonios" data-bs-dismiss="offcanvas">Testimonios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto" data-bs-dismiss="offcanvas">Contacto</a>
+        </li>
+      </ul>
+      <a class="btn-sage justify-content-center"
+         href="#contacto" data-bs-dismiss="offcanvas">
+        <i class="bi bi-calendar-check" aria-hidden="true"></i> Agenda tu sesión
+      </a>
+      <div class="mt-4 pt-4" style="border-top:1px solid rgba(125,158,106,.2)">
+        <a class="btn-ig w-100 justify-content-center"
+           href="https://instagram.com/_amor_y_sanacion"
+           target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-instagram" aria-hidden="true"></i> @_amor_y_sanacion
+        </a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ═══ SERVICES ═══ -->
-  <section class="services" id="servicios">
-    <div class="container">
-      <span class="section-label">Servicios</span>
-      <h2 class="section-title">Terapias para tu bienestar</h2>
-      <p class="section-desc">Cada sesión es única y se adapta a tus necesidades. Te acompañamos en tu proceso de sanación con un enfoque profundamente humano.</p>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">💆</div>
-          <h3>Masajes Terapéuticos</h3>
-          <p>Sesiones individuales y paquetes de masajes relajantes y descontracturantes, diseñados para liberar tensiones y restaurar el equilibrio.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">✨</div>
-          <h3>Terapias Holísticas</h3>
-          <p>Sanación energética y emocional a través de técnicas que conectan cuerpo, mente y espíritu.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🌿</div>
-          <h3>Experiencias Sensoriales</h3>
-          <p>Aromaterapia, musicoterapia ambiental y ambientación consciente para una experiencia de bienestar profunda.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🧠</div>
-          <h3>Contenido de Bienestar</h3>
-          <p>Guías de mindfulness, meditación y crecimiento personal para llevar el bienestar a tu día a día.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">❤️</div>
-          <h3>Acompañamiento Emocional</h3>
-          <p>Un espacio de escucha amorosa y respeto por tu proceso único de sanación y transformación.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🦋</div>
-          <h3>Experiencias Grupales</h3>
-          <p>Talleres de autocuidado, retiros de bienestar y espacios de conexión colectiva.</p>
+  <!-- ══════════════════════════════════
+       MAIN
+  ══════════════════════════════════ -->
+  <main id="contenido-principal">
+
+    <!-- ─── HERO ─── -->
+    <section id="inicio" aria-labelledby="hero-title">
+      <span class="hero-leaf leaf-1" aria-hidden="true">
+        <svg width="110" height="176" viewBox="0 0 100 160" fill="none">
+          <path d="M50 10C80 30 95 80 50 150 5 80 20 30 50 10Z" fill="#7d9e6a"/>
+          <path d="M50 10L50 150" stroke="#5a7a50" stroke-width="1.5" opacity=".5"/>
+        </svg>
+      </span>
+      <span class="hero-leaf leaf-2" aria-hidden="true">
+        <svg width="72" height="115" viewBox="0 0 100 160" fill="none">
+          <path d="M50 10C80 30 95 80 50 150 5 80 20 30 50 10Z" fill="#c9943a"/>
+        </svg>
+      </span>
+      <span class="hero-leaf leaf-3" aria-hidden="true">
+        <svg width="95" height="152" viewBox="0 0 100 160" fill="none">
+          <path d="M50 10C80 30 95 80 50 150 5 80 20 30 50 10Z" fill="#b6c699"/>
+        </svg>
+      </span>
+
+      <div class="container py-5">
+        <div class="row align-items-center g-5">
+
+          <div class="col-lg-7">
+            <div class="d-flex flex-column gap-3">
+              <div class="hero-in">
+                <span class="hero-badge">
+                  <span class="badge-dot" aria-hidden="true"></span>
+                  Bienestar Integral
+                </span>
+              </div>
+              <h1 id="hero-title" class="hero-h1 mb-0 hero-in">
+                Un espacio para <em>reconectar</em><br class="d-none d-sm-block">
+                con tu bienestar
+              </h1>
+              <p class="mb-0 hero-in fw-light" style="font-size:1.05rem; color:var(--mid); max-width:480px;">
+                Masajes terapéuticos, terapias holísticas y acompañamiento emocional
+                en un espacio cálido y seguro.
+              </p>
+              <div class="d-flex flex-wrap gap-3 hero-in">
+                <a href="#contacto" class="btn-sage">
+                  <i class="bi bi-calendar-check" aria-hidden="true"></i> Agenda tu sesión
+                </a>
+                <a href="secciones/servicios.html" class="btn-outline-sage">
+                  Ver servicios <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="d-flex gap-4 pt-4 hero-in"
+                   style="border-top:1px solid rgba(125,158,106,.15);"
+                   aria-label="Datos destacados">
+                <div class="text-center">
+                  <strong class="stat-value counter" data-target="100" aria-label="100%">0</strong>
+                  <span class="stat-label d-block">% Personalizado</span>
+                </div>
+                <div class="text-center">
+                  <strong class="stat-value counter" data-target="6" aria-label="6+">0</strong>
+                  <span class="stat-label d-block">+ Servicios</span>
+                </div>
+                <div class="text-center">
+                  <strong class="stat-value" aria-hidden="true">♡</strong>
+                  <span class="stat-label d-block">Amor y empatía</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 d-none d-lg-flex justify-content-center">
+            <div style="max-width:380px; width:100%;">
+              <div class="hero-orb"
+                   role="img" aria-label="Ilustración de bienestar">
+                <span class="orb-emoji" aria-hidden="true">🦋</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══ ABOUT ═══ -->
-  <section class="about" id="nosotros">
-    <div class="container">
-      <div class="about-content">
-        <span class="section-label">Sobre nosotros</span>
-        <h2 class="section-title">Tu espacio de sanación</h2>
-        <p>Creemos que el bienestar es un acto de amor propio. Nacimos con la intención de crear un espacio cálido y seguro donde cada persona pueda reencontrarse con su equilibrio físico, emocional y energético.</p>
-        <div class="about-quote">"El bienestar no es un lujo ocasional, es un acto de amor propio y un hábito de vida."</div>
-        <p style="margin-top: 16px;">Te acompañamos con empatía, respeto y confidencialidad en cada paso de tu camino hacia una vida más consciente y plena.</p>
-      </div>
-      <div class="about-visual">
-        <div style="width:260px;height:260px;border-radius:50%;background:linear-gradient(135deg,#eacfc8,#d9d3e2);display:flex;align-items:center;justify-content:center;">
-          <span style="font-size:4.5rem;opacity:0.6;">🦋</span>
+    <!-- ─── SERVICIOS (preview) ─── -->
+    <section id="servicios" class="py-5" aria-labelledby="servicios-title" style="background:#fff;">
+      <div class="container py-3">
+        <div class="row mb-5">
+          <div class="col-lg-7 reveal">
+            <span class="section-label">Servicios</span>
+            <h2 id="servicios-title" class="section-title mb-3">
+              Terapias para tu <em>bienestar</em>
+            </h2>
+            <p class="fw-light" style="color:var(--muted);">
+              Cada sesión es única y se adapta a tus necesidades.
+              Te acompañamos con un enfoque profundamente humano.
+            </p>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ═══ CONTACT ═══ -->
-  <section class="contact" id="contacto">
-    <div class="container">
-      <span class="section-label">Contacto</span>
-      <h2 class="section-title">Demos el primer paso</h2>
-      <div class="contact-layout">
-        <div class="contact-info">
-          <p style="margin-bottom: 24px;" id="contactText">Escribinos y te responderemos a la brevedad. También podés contactarnos por Instagram.</p>
-          <div class="info-item">📍 San Andrés, Gral. San Martín, Buenos Aires</div>
-          <div class="info-item">📧 hola@amorysanacion.com</div>
-          <div class="info-item">📱 <span id="phoneDisplay">Próximamente</span></div>
-          <a href="https://instagram.com/_amor_y_sanacion" target="_blank" class="btn-primary" style="margin-top: 12px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            Seguinos en Instagram
+        <div class="row g-4" role="list">
+          <div class="col-sm-6 col-lg-4 reveal" role="listitem">
+            <article class="service-card" aria-labelledby="srv1">
+              <div class="service-card-body">
+                <div class="service-icon" aria-hidden="true">💆</div>
+                <h3 id="srv1">Masajes Terapéuticos</h3>
+                <p>Sesiones relajantes y descontracturantes para liberar tensiones y restaurar el equilibrio.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 reveal reveal-d1" role="listitem">
+            <article class="service-card" aria-labelledby="srv2">
+              <div class="service-card-body">
+                <div class="service-icon" aria-hidden="true">✨</div>
+                <h3 id="srv2">Terapias Holísticas</h3>
+                <p>Sanación energética y emocional conectando cuerpo, mente y espíritu.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 reveal reveal-d2" role="listitem">
+            <article class="service-card" aria-labelledby="srv3">
+              <div class="service-card-body">
+                <div class="service-icon" aria-hidden="true">❤️</div>
+                <h3 id="srv3">Acompañamiento Emocional</h3>
+                <p>Un espacio de escucha amorosa y respeto por tu proceso único de sanación.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="text-center mt-5 reveal">
+          <a href="secciones/servicios.html" class="btn-sage">
+            Conocer todos los servicios
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
           </a>
         </div>
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" placeholder="Tu nombre" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="tu@email.com" required>
-          </div>
-          <div class="form-group">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" placeholder="Contanos en qué te gustaría profundizar..." required></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Enviar mensaje</button>
-          <p id="formFeedback" style="margin-top:12px;font-size:0.83rem;color:#b6c699;display:none;">✓ Mensaje enviado con éxito. Te contactaremos pronto.</p>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══ FOOTER ═══ -->
-  <footer>
+    <!-- ─── NOSOTROS (preview) ─── -->
+    <section id="nosotros" class="py-5 about-section" aria-labelledby="nosotros-title">
+      <div class="container py-3">
+        <div class="row align-items-center g-5">
+
+          <div class="col-lg-5 d-flex justify-content-center order-lg-2 reveal reveal-d1">
+            <div class="about-orb" role="img" aria-label="Mariposa, símbolo de transformación">🦋</div>
+          </div>
+
+          <div class="col-lg-7 order-lg-1 reveal">
+            <span class="section-label">Sobre nosotros</span>
+            <h2 id="nosotros-title" class="section-title mb-4">
+              Tu espacio de <em>sanación</em>
+            </h2>
+            <p class="fw-light mb-3" style="color:var(--mid);">
+              Creemos que el bienestar es un acto de amor propio. Nacimos con la intención
+              de crear un espacio cálido y seguro donde cada persona pueda reencontrarse
+              con su equilibrio físico, emocional y energético.
+            </p>
+            <blockquote class="quote-block my-4">
+              <p>"El bienestar no es un lujo ocasional, es un acto de amor propio y un hábito de vida."</p>
+            </blockquote>
+            <a href="secciones/nosotros.html" class="btn-outline-sage mt-2">
+              Conocer nuestra historia
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── TESTIMONIOS ─── -->
+    <section id="testimonios" class="py-5" aria-labelledby="testimonios-title" style="background:#fff;">
+      <div class="container py-3">
+        <div class="row mb-5">
+          <div class="col-lg-6 reveal">
+            <span class="section-label">Testimonios</span>
+            <h2 id="testimonios-title" class="section-title">
+              Lo que dicen quienes nos <em>eligen</em>
+            </h2>
+          </div>
+        </div>
+        <div class="row g-4" role="list">
+          <div class="col-md-4 reveal" role="listitem">
+            <article class="testimonial-card" aria-label="Testimonio de María L.">
+              <p class="testimonial-stars mb-2" aria-label="5 de 5 estrellas">★★★★★</p>
+              <p class="testimonial-text mb-4">"Salí de la sesión sintiéndome completamente renovada. El ambiente es increíblemente cálido y el trato genuinamente humano."</p>
+              <footer class="d-flex align-items-center gap-2 mt-auto">
+                <div class="testimonial-avatar" aria-hidden="true">🌸</div>
+                <div>
+                  <p class="testimonial-name">María L.</p>
+                  <p class="testimonial-loc">San Andrés, GBA</p>
+                </div>
+              </footer>
+            </article>
+          </div>
+          <div class="col-md-4 reveal reveal-d1" role="listitem">
+            <article class="testimonial-card" aria-label="Testimonio de Claudia R.">
+              <p class="testimonial-stars mb-2" aria-label="5 de 5 estrellas">★★★★★</p>
+              <p class="testimonial-text mb-4">"Encontré el espacio que tanto buscaba. Cada visita es un momento de reconexión conmigo misma. Lo recomiendo con todo mi corazón."</p>
+              <footer class="d-flex align-items-center gap-2 mt-auto">
+                <div class="testimonial-avatar" aria-hidden="true">🌿</div>
+                <div>
+                  <p class="testimonial-name">Claudia R.</p>
+                  <p class="testimonial-loc">Gral. San Martín</p>
+                </div>
+              </footer>
+            </article>
+          </div>
+          <div class="col-md-4 reveal reveal-d2" role="listitem">
+            <article class="testimonial-card" aria-label="Testimonio de Valeria M.">
+              <p class="testimonial-stars mb-2" aria-label="5 de 5 estrellas">★★★★★</p>
+              <p class="testimonial-text mb-4">"El masaje fue transformador. Sentí que me liberé de tensiones que cargaba hace meses. Un espacio muy especial."</p>
+              <footer class="d-flex align-items-center gap-2 mt-auto">
+                <div class="testimonial-avatar" aria-hidden="true">✨</div>
+                <div>
+                  <p class="testimonial-name">Valeria M.</p>
+                  <p class="testimonial-loc">Villa del Parque</p>
+                </div>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACTO (con formulario validado) ─── -->
+    <section id="contacto" class="py-5 contact-section" aria-labelledby="contacto-title">
+      <div class="container py-3">
+        <div class="row mb-5">
+          <div class="col-lg-6 reveal">
+            <span class="section-label">Contacto</span>
+            <h2 id="contacto-title" class="section-title">
+              Demos el <em>primer paso</em>
+            </h2>
+          </div>
+        </div>
+
+        <div class="row g-5 align-items-start">
+
+          <!-- Información de contacto -->
+          <div class="col-lg-5 reveal">
+            <p class="fw-light mb-4" style="color:var(--mid);">
+              Escribinos y te responderemos a la brevedad.
+              También podés encontrarnos en Instagram.
+            </p>
+            <address class="d-flex flex-column gap-3 mb-4">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="contact-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-geo-alt-fill text-sage"></i>
+                </div>
+                <div>
+                  <p class="contact-label mb-0">Ubicación</p>
+                  <p class="contact-value mb-0">San Andrés, Gral. San Martín, Buenos Aires</p>
+                </div>
+              </div>
+              <div class="d-flex gap-3 align-items-start">
+                <div class="contact-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-envelope-fill text-sage"></i>
+                </div>
+                <div>
+                  <p class="contact-label mb-0">Email</p>
+                  <a href="mailto:hola@amorysanacion.com"
+                     class="contact-value text-decoration-none"
+                     style="color:var(--mid);">hola@amorysanacion.com</a>
+                </div>
+              </div>
+              <div class="d-flex gap-3 align-items-start">
+                <div class="contact-icon-wrap" aria-hidden="true">
+                  <i class="bi bi-whatsapp text-sage"></i>
+                </div>
+                <div>
+                  <p class="contact-label mb-0">WhatsApp</p>
+                  <p class="contact-value mb-0">Próximamente</p>
+                </div>
+              </div>
+            </address>
+            <a href="https://instagram.com/_amor_y_sanacion"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-ig"
+               aria-label="Ir al Instagram de Amor y Sanación">
+              <i class="bi bi-instagram" aria-hidden="true"></i> Seguinos en Instagram
+            </a>
+          </div>
+
+          <!-- Formulario validado -->
+          <div class="col-lg-7 reveal reveal-d1">
+            <div class="form-wrap">
+              <form id="contactForm" novalidate aria-label="Formulario de contacto">
+
+                <div class="row g-3">
+
+                  <div class="col-sm-6">
+                    <label for="nombre" class="form-label">
+                      Nombre completo
+                      <span class="text-danger" aria-hidden="true">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="nombre" name="nombre"
+                           placeholder="Tu nombre"
+                           required autocomplete="name"
+                           aria-required="true"
+                           aria-describedby="nombre-fb">
+                    <div class="invalid-feedback" id="nombre-fb">
+                      Por favor ingresá tu nombre completo.
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="email" class="form-label">
+                      Email
+                      <span class="text-danger" aria-hidden="true">*</span>
+                    </label>
+                    <input type="email" class="form-control" id="email" name="email"
+                           placeholder="tu@email.com"
+                           required autocomplete="email"
+                           aria-required="true"
+                           aria-describedby="email-fb">
+                    <div class="invalid-feedback" id="email-fb">
+                      Ingresá un email válido.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="telefono" class="form-label">
+                      Teléfono
+                      <span class="fw-normal" style="color:var(--muted);">(opcional)</span>
+                    </label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono"
+                           placeholder="11 1234-5678"
+                           autocomplete="tel"
+                           pattern="[\d\s\-\+\(\)]{7,20}"
+                           aria-describedby="telefono-fb">
+                    <div class="invalid-feedback" id="telefono-fb">
+                      Ingresá un número de teléfono válido.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="servicio" class="form-label">
+                      Servicio de interés
+                      <span class="text-danger" aria-hidden="true">*</span>
+                    </label>
+                    <select class="form-select" id="servicio" name="servicio"
+                            required
+                            aria-required="true"
+                            aria-describedby="servicio-fb">
+                      <option value="">Seleccioná un servicio…</option>
+                      <option value="masajes">Masajes Terapéuticos</option>
+                      <option value="holisticas">Terapias Holísticas</option>
+                      <option value="sensoriales">Experiencias Sensoriales</option>
+                      <option value="emocional">Acompañamiento Emocional</option>
+                      <option value="grupales">Experiencias Grupales</option>
+                      <option value="contenido">Contenido de Bienestar</option>
+                    </select>
+                    <div class="invalid-feedback" id="servicio-fb">
+                      Seleccioná el servicio de tu interés.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="mensaje" class="form-label">
+                      Mensaje
+                      <span class="text-danger" aria-hidden="true">*</span>
+                    </label>
+                    <textarea class="form-control" id="mensaje" name="mensaje"
+                              rows="4"
+                              placeholder="Contanos en qué te gustaría profundizar…"
+                              required minlength="10"
+                              aria-required="true"
+                              aria-describedby="mensaje-fb"></textarea>
+                    <div class="invalid-feedback" id="mensaje-fb">
+                      El mensaje debe tener al menos 10 caracteres.
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="mt-4">
+                  <button type="submit" id="submitBtn"
+                          class="btn-sage w-100 justify-content-center"
+                          aria-label="Enviar formulario de contacto">
+                    <span id="btnLabel">Enviar mensaje</span>
+                    <span id="btnSpinner"
+                          class="spinner-border spinner-border-sm d-none"
+                          role="status" aria-hidden="true"></span>
+                  </button>
+                </div>
+
+                <!-- Feedback de éxito (aria-live para lectores de pantalla) -->
+                <div id="successMsg"
+                     class="d-none mt-3 p-3 d-flex align-items-center gap-2"
+                     role="alert" aria-live="polite"
+                     style="background:var(--sage-pale);
+                            border:1px solid rgba(125,158,106,.3);
+                            border-radius:.75rem; color:var(--sage);">
+                  <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                  <span>¡Mensaje enviado! Te contactaremos pronto con mucho amor.</span>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer class="site-footer py-5" role="contentinfo">
     <div class="container">
-      <p>&copy; 2026 <strong>Amor y Sanación</strong> · Todos los derechos reservados</p>
+      <div class="row align-items-center gy-4">
+        <div class="col-md-4">
+          <p class="footer-brand mb-1">Amor y <em>Sanación</em></p>
+          <p class="mb-0" style="font-size:.82rem; color:rgba(255,255,255,.4);">
+            Bienestar integral · San Andrés, GBA
+          </p>
+        </div>
+        <nav class="col-md-5 d-flex flex-wrap gap-2" aria-label="Navegación del pie de página">
+          <a href="#servicios"   class="footer-link">Servicios</a>
+          <a href="secciones/nosotros.html" class="footer-link">Nosotros</a>
+          <a href="#testimonios" class="footer-link">Testimonios</a>
+          <a href="#contacto"    class="footer-link">Contacto</a>
+          <a href="https://instagram.com/_amor_y_sanacion"
+             target="_blank" rel="noopener noreferrer"
+             class="footer-link">
+            <i class="bi bi-instagram" aria-hidden="true"></i> Instagram
+          </a>
+        </nav>
+        <div class="col-md-3 text-md-end">
+          <p class="mb-0" style="font-size:.75rem; color:rgba(255,255,255,.25);">
+            &copy; 2026 Amor y Sanación
+          </p>
+        </div>
+      </div>
+      <p class="footer-copy text-center mt-4 pt-4">
+        &copy; 2026 Amor y Sanación · Todos los derechos reservados
+      </p>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('formFeedback').style.display = 'block';
-      this.reset();
-    });
-  </script>
+  <!-- jQuery 3.7.1 (antes de Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+  <!-- Bootstrap 5.3.8 Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Scripts propios -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 </html>

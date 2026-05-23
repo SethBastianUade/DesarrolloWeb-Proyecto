@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conocé todos los servicios de Amor y Sanación: masajes terapéuticos, terapias holísticas, experiencias sensoriales, acompañamiento emocional y más.">
+  <title>Servicios · Amor y Sanación</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <a href="https://wa.me/" id="waBtn" aria-label="Contactar por WhatsApp" title="WhatsApp">
+    <i class="bi bi-whatsapp fs-4" aria-hidden="true"></i>
+  </a>
+
+  <!-- ══════════════════════════════════
+       HEADER
+  ══════════════════════════════════ -->
+  <header>
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top py-0"
+         aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand py-3" href="../index.html">Amor y <em>Sanación</em></a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasMenu"
+                aria-controls="offcanvasMenu"
+                aria-expanded="false"
+                aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="desktopNav">
+          <ul class="navbar-nav align-items-center gap-1 py-2">
+            <li class="nav-item">
+              <a class="nav-link active" href="servicios.html"
+                 aria-current="page">Servicios</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html#testimonios">Testimonios</a></li>
+            <li class="nav-item"><a class="nav-link" href="../index.html#contacto">Contacto</a></li>
+            <li class="nav-item ms-2">
+              <a class="btn-nav-ig"
+                 href="https://instagram.com/_amor_y_sanacion"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Seguinos en Instagram">
+                <i class="bi bi-instagram" aria-hidden="true"></i> Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1"
+       id="offcanvasMenu" aria-labelledby="offcanvasLabel">
+    <div class="offcanvas-header">
+      <span class="navbar-brand m-0" id="offcanvasLabel">Amor y <em>Sanación</em></span>
+      <button type="button" class="btn-close"
+              data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-center gap-1">
+      <ul class="navbar-nav gap-1 mb-4">
+        <li class="nav-item"><a class="nav-link active" href="servicios.html" data-bs-dismiss="offcanvas" aria-current="page">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="nosotros.html" data-bs-dismiss="offcanvas">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#testimonios" data-bs-dismiss="offcanvas">Testimonios</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#contacto" data-bs-dismiss="offcanvas">Contacto</a></li>
+      </ul>
+      <a class="btn-sage justify-content-center" href="../index.html#contacto">
+        <i class="bi bi-calendar-check" aria-hidden="true"></i> Agenda tu sesión
+      </a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       MAIN
+  ══════════════════════════════════ -->
+  <main id="contenido-principal">
+
+    <!-- ─── PAGE HERO ─── -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <nav aria-label="Ruta de navegación">
+          <ol class="breadcrumb mb-3">
+            <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Servicios</li>
+          </ol>
+        </nav>
+        <h1 id="page-title" class="page-hero-title">
+          Nuestros <em>Servicios</em>
+        </h1>
+        <p class="page-hero-lead">
+          Cada terapia está diseñada para acompañarte en tu proceso único de
+          bienestar — desde el cuerpo hasta la emoción, con empatía y profesionalismo.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── SERVICIOS DETALLADOS ─── -->
+    <section id="catalogo" class="py-5" aria-labelledby="catalogo-title" style="background:#fff;">
+      <div class="container py-3">
+
+        <div class="row mb-5">
+          <div class="col-lg-7 reveal">
+            <span class="section-label">Catálogo completo</span>
+            <h2 id="catalogo-title" class="section-title">
+              Todo lo que <em>ofrecemos</em>
+            </h2>
+          </div>
+        </div>
+
+        <div class="row g-4" role="list">
+
+          <!-- Masajes -->
+          <div class="col-md-6 reveal" role="listitem">
+            <article class="service-detail-card" aria-labelledby="det-srv1">
+              <div class="service-detail-icon" aria-hidden="true">💆</div>
+              <h3 id="det-srv1">Masajes Terapéuticos</h3>
+              <p>Sesiones individualizadas que combinan técnicas de masaje sueco, deep tissue y drenaje linfático para liberar tensiones acumuladas y devolver el equilibrio al cuerpo.</p>
+              <ul>
+                <li>Masaje relajante (60 / 90 min)</li>
+                <li>Masaje descontracturante</li>
+                <li>Drenaje linfático manual</li>
+                <li>Paquetes de sesiones con descuento</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Holísticas -->
+          <div class="col-md-6 reveal reveal-d1" role="listitem">
+            <article class="service-detail-card" aria-labelledby="det-srv2">
+              <div class="service-detail-icon" aria-hidden="true">✨</div>
+              <h3 id="det-srv2">Terapias Holísticas</h3>
+              <p>Abordaje integral del ser desde sus dimensiones física, emocional, mental y espiritual. Técnicas ancestrales y contemporáneas integradas para una sanación profunda.</p>
+              <ul>
+                <li>Reiki Usui (canalización de energía)</li>
+                <li>Registros Akáshicos</li>
+                <li>Tapping (EFT)</li>
+                <li>Constelaciones familiares individuales</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Sensoriales -->
+          <div class="col-md-6 reveal" role="listitem">
+            <article class="service-detail-card" aria-labelledby="det-srv3">
+              <div class="service-detail-icon" aria-hidden="true">🌿</div>
+              <h3 id="det-srv3">Experiencias Sensoriales</h3>
+              <p>Inmersión consciente a través de los sentidos. Creamos ambientes diseñados para llevar al sistema nervioso a un estado de calma profunda y apertura.</p>
+              <ul>
+                <li>Aromaterapia con aceites esenciales puros</li>
+                <li>Baños de sonido con cuencos tibetanos</li>
+                <li>Musicoterapia receptiva</li>
+                <li>Experiencias de privación sensorial leve</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Contenido -->
+          <div class="col-md-6 reveal reveal-d1" role="listitem">
+            <article class="service-detail-card" aria-labelledby="det-srv4">
+              <div class="service-detail-icon" aria-hidden="true">🧠</div>
+              <h3 id="det-srv4">Contenido de Bienestar</h3>
+              <p>Recursos digitales para sostener el proceso de sanación más allá de las sesiones. Herramientas concretas para integrar el bienestar en la vida cotidiana.</p>
+              <ul>
+                <li>Guías de mindfulness descargables</li>
+                <li>Audios de meditaciones guiadas</li>
+                <li>Rutinas de autocuidado personalizadas</li>
+                <li>Contenido exclusivo para suscriptores</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Emocional -->
+          <div class="col-md-6 reveal" role="listitem">
+            <article class="service-detail-card" aria-labelledby="det-srv5">
+              <div class="service-detail-icon" aria-hidden="true">❤️</div>
+              <h3 id="det-srv5">Acompañamiento Emocional</h3>
+              <p>Un espacio de contención y escucha activa para atravesar momentos difíciles, gestionar el estrés y fortalecer el vínculo con uno mismo.</p>
+              <ul>
+                <li>Sesiones individuales de escucha terapéutica</li>
+                <li>Acompañamiento en duelos y transiciones vitales</li>
+                <li>Gestión del estrés y la ansiedad</li>
+                <li>Trabajo con la autoestima y el autocuidado</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Grupales -->
+          <div class="col-md-6 reveal reveal-d1" role="listitem">
+            <article class="service-detail-card" aria-labelledby="det-srv6">
+              <div class="service-detail-icon" aria-hidden="true">🦋</div>
+              <h3 id="det-srv6">Experiencias Grupales</h3>
+              <p>Espacios colectivos de transformación donde el encuentro con otrxs potencia el proceso individual. Formatos presenciales en San Andrés.</p>
+              <ul>
+                <li>Talleres de autocuidado (4 personas máx.)</li>
+                <li>Círculos de mujeres y sanación</li>
+                <li>Retiros de bienestar de jornada completa</li>
+                <li>Clases abiertas de meditación</li>
+              </ul>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROCESO ─── -->
+    <section id="proceso" class="py-5 about-section" aria-labelledby="proceso-title">
+      <div class="container py-3">
+        <div class="row g-5 align-items-center">
+
+          <div class="col-lg-5 reveal">
+            <span class="section-label">Metodología</span>
+            <h2 id="proceso-title" class="section-title mb-4">
+              ¿Cómo es una <em>sesión</em>?
+            </h2>
+            <p class="fw-light" style="color:var(--mid);">
+              Cada encuentro es un espacio seguro, confidencial y diseñado específicamente
+              para vos. No hay fórmulas, hay presencia.
+            </p>
+          </div>
+
+          <div class="col-lg-7 reveal reveal-d1">
+            <div class="d-flex flex-column gap-4">
+
+              <div class="process-step">
+                <span class="process-number" aria-hidden="true">01</span>
+                <div>
+                  <h3>Primera consulta gratuita</h3>
+                  <p>Conversamos sobre tu historia, tus necesidades y lo que estás buscando. Sin compromisos. Es un espacio para conocernos y ver si el vínculo es el indicado.</p>
+                </div>
+              </div>
+
+              <div class="process-step">
+                <span class="process-number" aria-hidden="true">02</span>
+                <div>
+                  <h3>Diseño de tu proceso</h3>
+                  <p>Juntos definimos qué técnicas y frecuencia son las más adecuadas para tu objetivo. El plan se ajusta en el tiempo según cómo respondás.</p>
+                </div>
+              </div>
+
+              <div class="process-step">
+                <span class="process-number" aria-hidden="true">03</span>
+                <div>
+                  <h3>Sesiones y seguimiento</h3>
+                  <p>Cada sesión incluye un espacio de cierre y reflexión. Entre encuentros, podés acceder a recursos de apoyo y consultas breves sin costo adicional.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── FAQ ─── -->
+    <section id="faq" class="py-5" aria-labelledby="faq-title" style="background:#fff;">
+      <div class="container py-3">
+
+        <div class="row mb-5">
+          <div class="col-lg-6 reveal">
+            <span class="section-label">Preguntas frecuentes</span>
+            <h2 id="faq-title" class="section-title">
+              Todo lo que querés <em>saber</em>
+            </h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 reveal">
+            <div class="accordion" id="faqAccordion">
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq1"
+                          aria-expanded="true"
+                          aria-controls="faq1">
+                    ¿Necesito experiencia previa en terapias para empezar?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show"
+                     data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    No. Nuestras sesiones son accesibles para personas que nunca tuvieron
+                    ningún tipo de terapia. La primera consulta es justamente para entender
+                    tu punto de partida y diseñar un proceso adecuado para vos.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq2"
+                          aria-expanded="false"
+                          aria-controls="faq2">
+                    ¿Con qué frecuencia se recomienda asistir?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse"
+                     data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Depende de cada proceso y objetivo. En general, recomendamos comenzar
+                    con una sesión semanal o quincenal durante el primer mes. Luego
+                    ajustamos la frecuencia según tu evolución y posibilidades.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq3"
+                          aria-expanded="false"
+                          aria-controls="faq3">
+                    ¿Las sesiones son presenciales o también virtuales?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse"
+                     data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Los masajes y experiencias sensoriales son exclusivamente presenciales
+                    en nuestro espacio de San Andrés. El acompañamiento emocional, las
+                    terapias holísticas y el contenido de bienestar pueden realizarse
+                    de forma virtual según el caso.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq4"
+                          aria-expanded="false"
+                          aria-controls="faq4">
+                    ¿Cómo se abonan las sesiones?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse"
+                     data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Aceptamos efectivo y transferencia bancaria. Los paquetes de sesiones
+                    tienen descuento y se abonan al inicio. Próximamente habilitaremos
+                    pago con tarjeta. Los precios se informan en la primera consulta.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faq5"
+                          aria-expanded="false"
+                          aria-controls="faq5">
+                    ¿Qué pasa si necesito cancelar un turno?
+                  </button>
+                </h3>
+                <div id="faq5" class="accordion-collapse collapse"
+                     data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Pedimos un aviso de al menos 24 horas de anticipación para poder
+                    reasignar el turno. En casos de fuerza mayor siempre buscamos
+                    una solución flexible. Tu bienestar y el respeto mutuo son nuestra prioridad.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── CTA ─── -->
+    <section class="py-5 contact-section" aria-labelledby="cta-title">
+      <div class="container py-3">
+        <div class="cta-banner reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <h2 id="cta-title">¿Lista para dar el <em style="color:rgba(255,255,255,.8);">primer paso</em>?</h2>
+              <p class="mb-0">Agendá tu primera consulta gratuita y sin compromiso. Estamos aquí para acompañarte.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="../index.html#contacto" class="btn-cta-white">
+                <i class="bi bi-calendar-check" aria-hidden="true"></i> Agendar consulta
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer class="site-footer py-5" role="contentinfo">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-4">
+          <p class="footer-brand mb-1">Amor y <em>Sanación</em></p>
+          <p class="mb-0" style="font-size:.82rem; color:rgba(255,255,255,.4);">
+            Bienestar integral · San Andrés, GBA
+          </p>
+        </div>
+        <nav class="col-md-5 d-flex flex-wrap gap-2" aria-label="Navegación del pie de página">
+          <a href="servicios.html" class="footer-link">Servicios</a>
+          <a href="nosotros.html" class="footer-link">Nosotros</a>
+          <a href="../index.html#contacto" class="footer-link">Contacto</a>
+          <a href="https://instagram.com/_amor_y_sanacion"
+             target="_blank" rel="noopener noreferrer" class="footer-link">
+            <i class="bi bi-instagram" aria-hidden="true"></i> Instagram
+          </a>
+        </nav>
+        <div class="col-md-3 text-md-end">
+          <p class="mb-0" style="font-size:.75rem; color:rgba(255,255,255,.25);">
+            &copy; 2026 Amor y Sanación
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
