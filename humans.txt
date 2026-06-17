@@ -1,0 +1,44 @@
+/* AMOR Y SANACIÓN - humans.txt */
+/* Trabajo Integrador - Diseño Web */
+
+
+/* EQUIPO Y ROLES */
+  (Completar con los datos reales del grupo - hasta 5 integrantes)
+
+  Integrante 1: [Nombre Apellido]
+    Rol: UX Researcher
+    Responsabilidades: investigación de usuarios, protopersonas y arquetipos,
+      redacción del Brief UX.
+    Contacto: [email]
+
+  Integrante 2: [Nombre Apellido]
+    Rol: UI Designer
+    Responsabilidades: wireframes (baja y media fidelidad), guía de estilo,
+      paleta, tipografía y mockups (Stitch / Figma).
+    Contacto: [email]
+
+  Integrante 3: [Nombre Apellido]
+    Rol: Frontend Developer
+    Responsabilidades: maquetado HTML5 semántico, CSS3 + Bootstrap 5.3.8,
+      JavaScript y validación del formulario.
+    Contacto: [email]
+
+  Integrante 4: [Nombre Apellido]
+    Rol: QA / Documentation
+    Responsabilidades: pruebas responsive (320 / 768 / 1024px), Lighthouse,
+      validación W3C, contraste y armado de la documentación.
+    Contacto: [email]
+
+  Integrante 5: [Nombre Apellido]
+    Rol: [Rol]
+    Responsabilidades: [...]
+    Contacto: [email]
+
+
+/* SITIO */
+  Cliente (ficticio): Amor y Sanación - Bienestar integral
+  Ubicación: San Andrés, Gral. San Martín, Buenos Aires, Argentina
+  Stack: HTML5, CSS3, Bootstrap 5.3.8, JavaScript, jQuery 3.7.1
+  Materia: Diseño Web
+  Idioma: Español (es-AR)
+  Última actualización: 2026

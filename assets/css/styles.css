@@ -1,10 +1,10 @@
-/* ══════════════════════════════════════════════════════════
-   styles.css  ·  Amor y Sanación
-   Estilos personalizados sobre Bootstrap 5.3.8
-   Enfoque Mobile-First — breakpoints: 320 · 768 · 1024px+
-══════════════════════════════════════════════════════════ */
+/*
+  styles.css  ·  Amor y Sanación
+  Estilos personalizados sobre Bootstrap 5.3.8
+  Enfoque Mobile-First — breakpoints: 320 · 768 · 1024px+
+*/
 
-/* ─── VARIABLES DE MARCA + OVERRIDES BOOTSTRAP ─── */
+/* VARIABLES DE MARCA + OVERRIDES BOOTSTRAP */
 :root {
   --sage:        #7d9e6a;
   --sage-light:  #b6c699;
@@ -28,14 +28,14 @@
   --bs-border-radius-xl: 2rem;
 }
 
-/* ─── BASE ─── */
+/* BASE */
 html { scroll-behavior: smooth; }
 body { overflow-x: hidden; background: var(--cream); }
 h1, h2, h3, .font-display { font-family: 'Cormorant Garamond', serif; }
 address { font-style: normal; }
 a { transition: color .2s, opacity .2s; }
 
-/* ─── UTILIDADES DE MARCA ─── */
+/* UTILIDADES DE MARCA */
 .text-sage      { color: var(--sage)     !important; }
 .text-gold      { color: var(--gold)     !important; }
 .text-mid       { color: var(--mid)      !important; }
@@ -45,9 +45,7 @@ a { transition: color .2s, opacity .2s; }
 .bg-blush       { background: #f9ede4           !important; }
 .fw-light       { font-weight: 300 !important; }
 
-/* ══════════════════════════════════════════════════════════
-   NAVBAR
-══════════════════════════════════════════════════════════ */
+/* ===== NAVBAR ===== */
 #mainNav {
   transition: background .35s ease, box-shadow .35s ease;
   background: transparent;
@@ -117,9 +115,7 @@ a { transition: color .2s, opacity .2s; }
   border-radius: 1rem;
 }
 
-/* ══════════════════════════════════════════════════════════
-   HERO PRINCIPAL (index.html)
-══════════════════════════════════════════════════════════ */
+/* ===== HERO PRINCIPAL (index.html) ===== */
 #inicio {
   min-height: 100svh;
   display: flex;
@@ -247,9 +243,7 @@ a { transition: color .2s, opacity .2s; }
 .hero-in:nth-child(4) { animation-delay: .46s; }
 .hero-in:nth-child(5) { animation-delay: .58s; }
 
-/* ══════════════════════════════════════════════════════════
-   PAGE HERO — páginas secundarias
-══════════════════════════════════════════════════════════ */
+/* ===== PAGE HERO — páginas secundarias ===== */
 .page-hero {
   padding: 120px 0 64px;
   background: linear-gradient(160deg, var(--cream) 0%, #f0f7e8 100%);
@@ -290,9 +284,7 @@ a { transition: color .2s, opacity .2s; }
   max-width: 560px;
 }
 
-/* ══════════════════════════════════════════════════════════
-   ELEMENTOS DE SECCIÓN COMPARTIDOS
-══════════════════════════════════════════════════════════ */
+/* ===== ELEMENTOS DE SECCIÓN COMPARTIDOS ===== */
 .section-label {
   display: inline-block;
   font-size: .72rem;
@@ -333,9 +325,7 @@ a { transition: color .2s, opacity .2s; }
 .reveal-d2 { transition-delay: .2s; }
 .reveal-d3 { transition-delay: .3s; }
 
-/* ══════════════════════════════════════════════════════════
-   TARJETAS DE SERVICIO (cards compactas — index.html)
-══════════════════════════════════════════════════════════ */
+/* ===== TARJETAS DE SERVICIO (cards compactas — index.html) ===== */
 .service-card {
   background: var(--cream);
   border: 1px solid rgba(125, 158, 106, .12);
@@ -374,9 +364,7 @@ a { transition: color .2s, opacity .2s; }
 }
 .service-card p { font-size: .875rem; color: var(--muted); font-weight: 300; margin: 0; }
 
-/* ══════════════════════════════════════════════════════════
-   TARJETAS DE SERVICIO DETALLADAS (servicios.html)
-══════════════════════════════════════════════════════════ */
+/* ===== TARJETAS DE SERVICIO DETALLADAS (servicios.html) ===== */
 .service-detail-card {
   background: #fff;
   border: 1px solid rgba(125, 158, 106, .12);
@@ -438,9 +426,7 @@ a { transition: color .2s, opacity .2s; }
   top: .45rem;
 }
 
-/* ══════════════════════════════════════════════════════════
-   PROCESO / STEPS (servicios.html)
-══════════════════════════════════════════════════════════ */
+/* ===== PROCESO / STEPS (servicios.html) ===== */
 .process-step {
   display: flex;
   gap: 1.25rem;
@@ -489,9 +475,7 @@ a { transition: color .2s, opacity .2s; }
 .accordion-button:focus { box-shadow: 0 0 0 .2rem rgba(125, 158, 106, .2); }
 .accordion-body { font-size: .9rem; color: var(--mid); font-weight: 300; background: var(--cream); }
 
-/* ══════════════════════════════════════════════════════════
-   SECCIÓN NOSOTROS (index preview + nosotros.html)
-══════════════════════════════════════════════════════════ */
+/* ===== SECCIÓN NOSOTROS (index preview + nosotros.html) ===== */
 .about-section {
   background: linear-gradient(170deg, #f7efe6 0%, #eef6e6 100%);
 }
@@ -523,9 +507,7 @@ a { transition: color .2s, opacity .2s; }
   animation: morphBlob 14s ease-in-out infinite;
 }
 
-/* ══════════════════════════════════════════════════════════
-   VALORES (nosotros.html)
-══════════════════════════════════════════════════════════ */
+/* ===== VALORES (nosotros.html) ===== */
 .value-card {
   background: #fff;
   border: 1px solid rgba(125, 158, 106, .12);
@@ -593,9 +575,7 @@ a { transition: color .2s, opacity .2s; }
 }
 .timeline-item p { font-size: .875rem; color: var(--muted); font-weight: 300; margin: 0; }
 
-/* ══════════════════════════════════════════════════════════
-   TESTIMONIOS
-══════════════════════════════════════════════════════════ */
+/* ===== TESTIMONIOS ===== */
 .testimonial-card {
   background: var(--cream);
   border: 1px solid rgba(125, 158, 106, .12);
@@ -627,9 +607,7 @@ a { transition: color .2s, opacity .2s; }
 .testimonial-name { font-size: .875rem; font-weight: 600; color: var(--dark); margin: 0; }
 .testimonial-loc  { font-size: .75rem; color: var(--muted); margin: 0; }
 
-/* ══════════════════════════════════════════════════════════
-   SECCIÓN CONTACTO
-══════════════════════════════════════════════════════════ */
+/* ===== SECCIÓN CONTACTO ===== */
 .contact-section {
   background: linear-gradient(160deg, var(--cream) 0%, #eef5e7 100%);
 }
@@ -690,9 +668,7 @@ a { transition: color .2s, opacity .2s; }
   margin-bottom: .35rem;
 }
 
-/* ══════════════════════════════════════════════════════════
-   BOTONES
-══════════════════════════════════════════════════════════ */
+/* ===== BOTONES ===== */
 .btn-sage {
   display: inline-flex;
   align-items: center;
@@ -751,9 +727,7 @@ a { transition: color .2s, opacity .2s; }
 }
 .btn-ig:hover { opacity: .88; transform: translateY(-2px); }
 
-/* ══════════════════════════════════════════════════════════
-   FOOTER
-══════════════════════════════════════════════════════════ */
+/* ===== FOOTER ===== */
 .site-footer { background: var(--dark); }
 .footer-brand {
   font-family: 'Cormorant Garamond', serif;
@@ -778,9 +752,7 @@ a { transition: color .2s, opacity .2s; }
   border-top: 1px solid rgba(255, 255, 255, .06);
 }
 
-/* ══════════════════════════════════════════════════════════
-   WHATSAPP FLOTANTE
-══════════════════════════════════════════════════════════ */
+/* ===== WHATSAPP FLOTANTE ===== */
 #waBtn {
   position: fixed;
   bottom: 1.5rem; right: 1.25rem;
@@ -803,9 +775,7 @@ a { transition: color .2s, opacity .2s; }
   to   { transform: scale(1); opacity: 1; }
 }
 
-/* ══════════════════════════════════════════════════════════
-   CTA BANNER
-══════════════════════════════════════════════════════════ */
+/* ===== CTA BANNER ===== */
 .cta-banner {
   background: linear-gradient(135deg, var(--sage) 0%, #5d8050 100%);
   border-radius: var(--bs-border-radius-xl);
@@ -835,9 +805,7 @@ a { transition: color .2s, opacity .2s; }
 }
 .btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.15); }
 
-/* ══════════════════════════════════════════════════════════
-   RESPONSIVE — ajustes de detalle por breakpoint
-══════════════════════════════════════════════════════════ */
+/* ===== RESPONSIVE — ajustes de detalle por breakpoint ===== */
 
 /* 320px — mobile small: ya es el base, sin breakpoint */
 

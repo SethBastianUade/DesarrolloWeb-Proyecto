@@ -1,42 +1,37 @@
-/**
- * main.js  ·  Amor y Sanación
- * JavaScript propio del sitio
- *
- * Contenido:
- *   1. Navbar — efecto scroll
- *   2. Scroll Reveal — IntersectionObserver
- *   3. Contadores animados — jQuery $.animate() [ver nota pedagógica]
- *   4. Validación de formulario — HTML5 Constraint Validation + Bootstrap
- *   5. ScrollSpy — IntersectionObserver (resalta nav-link activo)
- *
- * Nota pedagógica sobre jQuery:
- *   Se utiliza jQuery 3.7.1 para dos funcionalidades específicas:
- *   a) $.animate() sobre propiedades de objetos JS (no CSS), que permite
- *      interpolar valores numéricos con easing sin requestAnimationFrame manual.
- *      Bootstrap 5 no provee esta utilidad.
- *   b) .fadeIn().delay().fadeOut() encadenado para mostrar el feedback
- *      del formulario de forma declarativa, demostrando el patrón de
- *      encadenamiento de métodos (method chaining) de jQuery.
- */
+/*
+  main.js - Amor y Sanación
+  Scripts propios del sitio.
+
+  Lo que hace este archivo:
+    1. Navbar con efecto al hacer scroll
+    2. Aparicion de las secciones al scrollear (IntersectionObserver)
+    3. Contadores animados (con jQuery .animate())
+    4. Validacion del formulario de contacto
+    5. ScrollSpy: marca el link de la seccion que se esta viendo
+
+  Sobre el uso de jQuery:
+  Usamos jQuery 3.7.1 nada mas que para dos cosas puntuales:
+    - animar los numeros de los contadores con $.animate(), que permite
+      animar un valor con easing (Bootstrap 5 no trae algo asi).
+    - mostrar y ocultar el mensaje de "enviado" del formulario encadenando
+      fadeIn().delay().fadeOut().
+  Todo el resto del sitio usa JavaScript puro. La justificacion del aporte
+  de jQuery tambien esta en el anexo Uso_de_IA del trabajo.
+*/
 
 'use strict';
 
-/* ══════════════════════════════════════════════════════════
-   1. NAVBAR — efecto al hacer scroll
-══════════════════════════════════════════════════════════ */
+/* 1. Navbar - efecto al hacer scroll */
 (function initNavbar() {
   const nav = document.getElementById('mainNav');
   if (!nav) return;
 
   const toggle = () => nav.classList.toggle('scrolled', window.scrollY > 30);
-  toggle(); // aplica al cargar si la página ya está scrolleada
+  toggle(); // por si la pagina ya esta scrolleada al cargar
   window.addEventListener('scroll', toggle, { passive: true });
 })();
 
-/* ══════════════════════════════════════════════════════════
-   2. SCROLL REVEAL — IntersectionObserver
-   Los elementos con clase .reveal aparecen al entrar al viewport
-══════════════════════════════════════════════════════════ */
+/* 2. Scroll reveal - las secciones con .reveal aparecen al entrar a la pantalla */
 (function initReveal() {
   const items = document.querySelectorAll('.reveal');
   if (!items.length) return;
@@ -56,11 +51,7 @@
   items.forEach(el => observer.observe(el));
 })();
 
-/* ══════════════════════════════════════════════════════════
-   3. CONTADORES ANIMADOS — jQuery $.animate()
-   Interpola una propiedad numérica de un objeto JS con easing.
-   Se dispara cuando el primer contador entra al viewport.
-══════════════════════════════════════════════════════════ */
+/* 3. Contadores animados - usamos jQuery .animate() para animar el numero */
 (function initCounters() {
   const counters = document.querySelectorAll('.counter');
   if (!counters.length || typeof jQuery === 'undefined') return;
@@ -77,7 +68,7 @@
           const $el    = jQuery(el);
           const target = parseInt($el.data('target'), 10);
 
-          /* jQuery: anima una propiedad de objeto JS (no CSS) con easing */
+          /* jQuery anima la propiedad val de un objeto con easing */
           jQuery({ val: 0 }).animate({ val: target }, {
             duration: 1800,
             easing: 'swing',
@@ -93,12 +84,9 @@
   observer.observe(counters[0]);
 })();
 
-/* ══════════════════════════════════════════════════════════
-   4. VALIDACIÓN DE FORMULARIO
-   Usa la API nativa Constraint Validation (HTML5) y las clases
-   de Bootstrap .was-validated / .invalid-feedback.
-   jQuery maneja el feedback visual post-envío.
-══════════════════════════════════════════════════════════ */
+/* 4. Validacion del formulario de contacto
+   Usa la validacion nativa de HTML5 (checkValidity) junto con las clases
+   .was-validated / .invalid-feedback de Bootstrap. */
 (function initForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -111,23 +99,24 @@
     e.preventDefault();
     e.stopPropagation();
 
-    /* Activa las clases de validación de Bootstrap */
+    /* activa los estilos de validacion de Bootstrap */
     form.classList.add('was-validated');
 
-    /* Verifica validez con la API nativa */
+    /* chequea si el formulario es valido con la API nativa */
     if (!form.checkValidity()) {
-      /* Accesibilidad: mueve el foco al primer campo inválido */
+      /* manda el foco al primer campo invalido (accesibilidad) */
       const firstInvalid = form.querySelector(':invalid');
       if (firstInvalid) firstInvalid.focus();
       return;
     }
 
-    /* Bloquea el botón y muestra spinner */
+    /* desactiva el boton y muestra el spinner mientras "envia" */
     submitBtn.disabled = true;
     if (btnLabel)   btnLabel.textContent = 'Enviando…';
     if (btnSpinner) btnSpinner.classList.remove('d-none');
 
-    /* Simula envío asíncrono — en producción reemplazar con fetch() o $.ajax() */
+    /* simulamos el envio con un setTimeout.
+       Para produccion habria que reemplazarlo por fetch() o $.ajax(). */
     setTimeout(function () {
       if (submitBtn)  submitBtn.disabled = false;
       if (btnLabel)   btnLabel.textContent = 'Enviar mensaje';
@@ -136,7 +125,7 @@
       form.reset();
       form.classList.remove('was-validated');
 
-      /* jQuery: fadeIn + delay + fadeOut encadenados (method chaining) */
+      /* jQuery: encadenamos fadeIn + delay + fadeOut para el mensaje de exito */
       if (typeof jQuery !== 'undefined') {
         const $msg = jQuery('#successMsg');
         $msg.removeClass('d-none')
@@ -147,7 +136,7 @@
               jQuery(this).addClass('d-none').show();
             });
       } else {
-        /* Fallback sin jQuery */
+        /* por si no llega a cargar jQuery */
         const msg = document.getElementById('successMsg');
         if (msg) {
           msg.classList.remove('d-none');
@@ -158,10 +147,8 @@
   });
 })();
 
-/* ══════════════════════════════════════════════════════════
-   5. SCROLLSPY — resalta el nav-link de la sección visible
-   Solo aplica en páginas con secciones e id de navegación
-══════════════════════════════════════════════════════════ */
+/* 5. ScrollSpy - resalta el link de la seccion que se esta viendo
+   Solo aplica en paginas que tienen secciones con id. */
 (function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('#desktopNav .nav-link[href*="#"]');
@@ -172,7 +159,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           navLinks.forEach(link => {
-            /* Compara el fragmento del href con el id de la sección */
+            /* compara el #ancla del link con el id de la seccion */
             const href = link.getAttribute('href');
             const isMatch = href === `#${entry.target.id}` ||
                             href.endsWith(`#${entry.target.id}`);
